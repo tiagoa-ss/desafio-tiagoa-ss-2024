@@ -8,7 +8,9 @@ Para baixar a estrutura no formato zip, basta clicar neste [link]().
  [ R E V I S A R - novo link]
 
 ### ENTREGANDO O DESAFIO
-Após resolver o desafio e validá-lo com os testes (mais detalhes nos tópicos abaixo), você terá que criar um repositório PÚBLICO no [Github](https://github.com/) com o nome de `desafio-zoo-db-2024`. Depois disso, você pode enviar o link do seu repositório para que possamos validá-lo para o e-mail: `start@dbserver.com.br`
+Após resolver o desafio e validá-lo com os testes (mais detalhes nos tópicos abaixo), você terá que criar um repositório PÚBLICO no [Github](https://github.com/) com o nome de `desafio-zoo-db-2024`. 
+
+Depois disso, você pode enviar o link do seu repositório para que possamos validá-lo para o e-mail: `start@dbserver.com.br`
 [ R E V I S A R - envio do link da mesma forma?]
 
 Se você ainda não teve contato com essas ferramentas, não tem problema, separamos um material para lhe ajudar nessa etapa: [Como usar Git e Github na prática](https://www.youtube.com/watch?v=UBAX-13g8OM).
@@ -66,37 +68,43 @@ Sua missão será construir a lógica para indicar os recintos onde novos animai
 ### EXEMPLOS
 
   Entrada
-   ```js
-     "MACACO", 2
-    ```
+  ```js
+ "MACACO", 2
+```
 
-	Saída
-    ```js
+  Saída
+```js
 	{
-		recintosViaveis: ["Recinto 1 (espaço livre: 5 total: 10)", "Recinto 2 (espaço livre: 3 total: 5)", "Recinto 3 (espaço livre: 2 total: 7)"],
+		recintosViaveis: [
+      "Recinto 1 (espaço livre: 5 total: 10)", 
+      "Recinto 2 (espaço livre: 3 total: 5)", 
+      "Recinto 3 (espaço livre: 2 total: 7)"
+      ],
 		erro: undefined
 	}
-    ```
+```
 
-	Entrada
-     ```js
+ Entrada
+```js
     "UNICORNIO", 1
-    ```
+```
 
-	Saída
-    ```js
+Saída
+```js
 	{
 		recintosViaveis: undefined,
 		erro: "Animal inválido"
 	}
-    ```
+```
 
 ### O CÓDIGO
 Você está recebendo uma estrutura básica para desenvolver a lógica do desafio. O arquivo principal está localizado dentro da pasta `src` e se chama `recintos-zoo.js`. Você pode desenvolver a sua lógica criando outros arquivos, métodos e até mesmo outras classes, porém o resultado deve poder ser obtido através do método `analisaRecintos`.
 
 > ALERTA:
 > É importante que a estrutura básica descrita acima não seja alterada, incluindo nome e parâmetros do método e caminho da classe. Iremos validar sua solução através destes, assim como você pode validar através dos cenários de testes já implementados em `src/recintos-zoo.test.js`.
-[ R E V I S A R - não alterar export?]
+
+
+[ R E V I S A R - o que mais não alterar? não alterar o export? algum cuidado nos imports?]
 
 Exemplo de chamada
 ```js
@@ -112,7 +120,7 @@ npm install
 
 ### VALIDANDO A SOLUÇÃO
 Junto com a estrutura básica você está recebendo alguns cenários de testes no arquivo `recintos-zoo.test.js` para auxiliar na validação da sua solução. Recomendamos que você crie mais casos de teste para aumentar a confiabilidade da sua solução.
-Para testar sua solução com os cenários existentes, basta rodar o seguinte comando:
+Para testar sua solução com os cenários, basta rodar o seguinte comando:
 ```bash
 npm test
 ```
