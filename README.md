@@ -68,33 +68,33 @@ Sua missão será construir a lógica para indicar os recintos onde novos animai
 ### EXEMPLOS
 
   Entrada
-  ```js
- "MACACO", 2
+```js
+"MACACO", 2
 ```
 
   Saída
 ```js
-	{
-		recintosViaveis: [
-      "Recinto 1 (espaço livre: 5 total: 10)", 
-      "Recinto 2 (espaço livre: 3 total: 5)", 
-      "Recinto 3 (espaço livre: 2 total: 7)"
-      ],
-		erro: undefined
-	}
+{
+  recintosViaveis: [
+    "Recinto 1 (espaço livre: 5 total: 10)", 
+    "Recinto 2 (espaço livre: 3 total: 5)", 
+    "Recinto 3 (espaço livre: 2 total: 7)"
+  ],
+  erro: undefined
+}
 ```
 
- Entrada
+  Entrada
 ```js
-    "UNICORNIO", 1
+"UNICORNIO", 1
 ```
 
 Saída
 ```js
-	{
-		recintosViaveis: undefined,
-		erro: "Animal inválido"
-	}
+{
+  recintosViaveis: undefined,
+  erro: "Animal inválido"
+}
 ```
 
 ### O CÓDIGO
@@ -108,7 +108,7 @@ Você está recebendo uma estrutura básica para desenvolver a lógica do desafi
 
 Exemplo de chamada
 ```js
-  new RecintosZoo().analisaRecintos('MACACO', 2);
+new RecintosZoo().analisaRecintos('MACACO', 2);
 ```
 
 ### INSTALANDO E RODANDO NA SUA MÁQUINA
