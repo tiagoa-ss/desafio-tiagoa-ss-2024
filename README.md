@@ -1,19 +1,17 @@
-
+# RECINTOS DO ZOO
 
 ## COMO BAIXAR O CÓDIGO E SUBMETER MINHA SOLUÇÃO?
 Para completar a etapa do desafio você terá que baixar a estrutura do código aqui na Azure, resolver o desafio usando Javascript e entregá-lo no repositório no seu github.
 
 ### BAIXANDO A ESTRUTURA
 Para baixar a estrutura no formato zip, basta clicar neste [link]().
+
  [ R E V I S A R - novo link]
 
 ### ENTREGANDO O DESAFIO
-Após resolver o desafio e validá-lo com os testes (mais detalhes nos tópicos abaixo), você terá que criar um repositório PÚBLICO no [Github](https://github.com/) com o nome de `desafio-zoo-db-2024`. 
+Após resolver o desafio e validá-lo com os testes (mais detalhes nos tópicos abaixo), você terá que criar um repositório **público** no [Github](https://github.com/) com o **nome** de `desafio-startdb-2024` e colocar o código na **branch** `main`.
 
-Depois disso, você pode enviar o link do seu repositório para que possamos validá-lo para o e-mail: `start@dbserver.com.br`
-[ R E V I S A R - envio do link da mesma forma?]
-
-Se você ainda não teve contato com essas ferramentas, não tem problema, separamos um material para lhe ajudar nessa etapa: [Como usar Git e Github na prática](https://www.youtube.com/watch?v=UBAX-13g8OM).
+Se você ainda não teve contato com essa ferramenta, não tem problema. Separamos um material para lhe ajudar nessa etapa: [Como usar Git e Github na prática](https://www.youtube.com/watch?v=UBAX-13g8OM).
 
 ## O DESAFIO
 Olá! Você foi contratado para ajudar na organização de um zoológico.
@@ -54,7 +52,8 @@ Sua missão será construir a lógica para indicar os recintos onde novos animai
 5) Um macaco não se sente confortável sem outro animal no recinto, seja da mesma ou outra espécie
 6) Quando há mais de uma espécie no mesmo recinto, é preciso considerar 1 espaço extra ocupado
 7) Não é possível separar os lotes de animais nem trocar os animais que já existem de recinto (eles são muito apegados!)
-  Por exemplo, se chegar um lote de 12 macacos, não é possível colocar 6 em 2 recintos.
+
+Por exemplo, se chegar um lote de 12 macacos, não é possível colocar 6 em 2 recintos.
 
 ### ENTRADAS E SAÍDAS
 
@@ -67,32 +66,26 @@ Sua missão será construir a lógica para indicar os recintos onde novos animai
 
 ### EXEMPLOS
 
-  Entrada
+Entrada para um caso válido
 ```js
 "MACACO", 2
 ```
-
-  Saída
-```js
-{
-  recintosViaveis: [
-    "Recinto 1 (espaço livre: 5 total: 10)", 
-    "Recinto 2 (espaço livre: 3 total: 5)", 
-    "Recinto 3 (espaço livre: 2 total: 7)"
-  ],
-  erro: undefined
-}
-```
-
-  Entrada
-```js
-"UNICORNIO", 1
-```
-
 Saída
 ```js
 {
-  recintosViaveis: undefined,
+  recintosViaveis: ["Recinto 1 (espaço livre: 5 total: 10)", 
+   "Recinto 2 (espaço livre: 3 total: 5)", 
+   "Recinto 3 (espaço livre: 2 total: 7)"]
+}
+```
+
+Entrada para um caso inválido
+```js
+"UNICORNIO", 1
+```
+Saída
+```js
+{
   erro: "Animal inválido"
 }
 ```
@@ -103,12 +96,9 @@ Você está recebendo uma estrutura básica para desenvolver a lógica do desafi
 > ALERTA:
 > É importante que a estrutura básica descrita acima não seja alterada, incluindo nome e parâmetros do método e caminho da classe. Iremos validar sua solução através destes, assim como você pode validar através dos cenários de testes já implementados em `src/recintos-zoo.test.js`.
 
-
-[ R E V I S A R - o que mais não alterar? não alterar o export? algum cuidado nos imports?]
-
 Exemplo de chamada
 ```js
-new RecintosZoo().analisaRecintos('MACACO', 2);
+  new RecintosZoo().analisaRecintos('MACACO', 2);
 ```
 
 ### INSTALANDO E RODANDO NA SUA MÁQUINA
@@ -120,9 +110,26 @@ npm install
 
 ### VALIDANDO A SOLUÇÃO
 Junto com a estrutura básica você está recebendo alguns cenários de testes no arquivo `recintos-zoo.test.js` para auxiliar na validação da sua solução. Recomendamos que você crie mais casos de teste para aumentar a confiabilidade da sua solução.
-Para testar sua solução com os cenários, basta rodar o seguinte comando:
+Para testar sua solução com os cenários existentes ou novos, basta rodar o seguinte comando:
 ```bash
 npm test
 ```
 
 Para saber mais consulte a [Documentação do Jest](https://jestjs.io/pt-BR/docs/getting-started).
+
+### VALIDANDO A ENTREGA
+Para garantir que seu desafio vai ser considerado, revise os seguintes pontos:
+
+#### GIT
+O repositório deve ser **público** e ter o **nome** e **branch** indicados na seção `ENTREGANDO O DESAFIO`.
+
+Para garantir que o repositório é público, deslogue-se do github e verifique se ainda consegue ver o código. Se sim, nós também conseguimos! Lembrando que vamos usar o link para o usuário informado durante o cadastro na Guppy. Veja [como alterar a visibilidade](https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
+
+#### CÓDIGO
+A solução deve ser entregue em **javascript** e a **estrutura de pastas e arquivos** deve seguir o indicado na seção `O CÓDIGO`.
+[ R E V I S A R - colocar imagem de como fica um repositório - onde colocar a imagem?]
+
+O **export** da classe deve ser mantido da seguinte maneira para compatibilidade com o arquivo de testes:
+```js
+export { RecintosZoo as RecintosZoo };
+```
