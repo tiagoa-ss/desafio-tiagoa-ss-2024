@@ -49,8 +49,7 @@ Sua missão será construir a lógica para indicar os recintos onde novos animai
 4) Hipopótamo(s) só tolera(m) outras espécies estando num recinto com savana e rio
 5) Um macaco não se sente confortável sem outro animal no recinto, seja da mesma ou outra espécie
 6) Quando há mais de uma espécie no mesmo recinto, é preciso considerar 1 espaço extra ocupado
-7) Não é possível separar os lotes de animais nem trocar os animais que já existem de recinto (eles são muito apegados!)
-
+7) Não é possível separar os lotes de animais nem trocar os animais que já existem de recinto (eles são muito apegados!).
 Por exemplo, se chegar um lote de 12 macacos, não é possível colocar 6 em 2 recintos.
 
 ### ENTRADAS E SAÍDAS
@@ -108,7 +107,7 @@ npm install
 
 ### VALIDANDO A SOLUÇÃO
 Junto com a estrutura básica você está recebendo alguns cenários de testes no arquivo `recintos-zoo.test.js` para auxiliar na validação da sua solução. Recomendamos que você crie mais casos de teste para aumentar a confiabilidade da sua solução.
-Para testar sua solução com os cenários existentes ou novos, basta rodar o seguinte comando:
+Para testar sua solução com os cenários existentes ou novos, rode o seguinte comando:
 ```bash
 npm test
 ```
@@ -121,11 +120,11 @@ Para garantir que seu desafio vai ser considerado, revise os seguintes pontos:
 #### GIT
 O repositório deve ser **público** e ter o **nome** e **branch** indicados na seção `ENTREGANDO O DESAFIO`.
 
-Para garantir que o repositório é público, deslogue-se do github e verifique se ainda consegue ver o código. Se sim, nós também conseguimos! Lembrando que vamos usar o link para o usuário informado durante o cadastro na Guppy. Veja [como alterar a visibilidade](https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
+Para verificar que o repositório é público, deslogue-se do github e tente ver o código. Se sim, nós também conseguimos ver! Lembrando que vamos usar o link para o usuário informado durante o cadastro na Guppy. Veja [como alterar a visibilidade](https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
 
 #### CÓDIGO
 A solução deve ser entregue em **javascript** e a **estrutura de pastas e arquivos** deve seguir o indicado na seção `O CÓDIGO`.
-[ R E V I S A R - colocar imagem de como fica um repositório - onde colocar a imagem?]
+[ REVISAR - colocar imagem de como fica um repositório - onde colocar a imagem?]
 
 O **export** da classe deve ser mantido da seguinte maneira para compatibilidade com o arquivo de testes:
 ```js
